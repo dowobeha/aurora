@@ -47,3 +47,18 @@ Run the following to get the program ready
 ## To run
 
 * `~/.aurora/aurora.sh`
+
+## Optional: to run on ssh login
+
+* Put the following in ~/.ssh/rc
+* Note: You must put in your actual username
+
+```
+# If scp, exit
+test -z $SSH_TTY && exit
+
+# Otherwise...
+clear
+/home/YOUR_USERNAME_GOES_HERE/.aurora/aurora.sh
+echo
+```
